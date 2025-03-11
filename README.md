@@ -1,6 +1,11 @@
 # Nes2Net: A Lightweight Nested Architecture for Foundation Model Driven Speech Anti-spoofing
 Official release of pretrained models and scripts for "Nes2Net: A Lightweight Nested Architecture for Foundation Model Driven Speech Anti-spoofing"
 
+----------------------------------------------------------------------
+🚨 **Important:** This repository is still in preparation. We will try to complete it by March 2025.
+----------------------------------------------------------------------
+
+
 **This repo is for the **ASVspoof** and **In-the-Wild** dataset.**
 
 For the Controlled Singing Voice Deepfake Detection (CtrSVDD) dataset: 
@@ -79,7 +84,7 @@ arXiv Link: To add
    
    If you want to test on the In-the-Wild dataset, it can be downloaded from [here](https://deepfake-total.com/in_the_wild)
 
-# Usage:
+# Usage （To update):
 
   1. If you want to easy inference with pre-ptrained model:
      1. Download the pretrained checkpoints from above table Google Drive links. For example, WavLM_Nes2Net_X_SeLU.
