@@ -1,0 +1,23 @@
+# 忽略 .uuid 文件
+.uuid
+
+# 忽略 .pt 文件
+*.pt
+
+# 忽略 .out 文件
+*.out
+
+# 忽略 Test_xxxxx.txt 文件
+Test_*.txt
+
+# 忽略所有 .sh 脚本
+*.sh
+
+# 忽略以 0220_ 开头的文件夹及其所有内容
+0220_*/
+
+# 可选：忽略某些常见的系统或编译文件
+.DS_Store
+Thumbs.db
+*.log
+
