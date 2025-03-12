@@ -8,7 +8,7 @@ Official release of pretrained models and scripts for "Nes2Net: A Lightweight Ne
 
 **This repo is for the **ASVspoof** and **In-the-Wild** dataset.**
 
-For the Controlled Singing Voice Deepfake Detection (CtrSVDD) dataset: 
+For the Controlled Singing Voice Deepfake Detection (CtrSVDD) dataset: https://github.com/Liu-Tianchi/Nes2Net
 
 For the **PartialSpoof** dataset: Coming soon
 
@@ -18,6 +18,7 @@ arXiv Link: To add
 
 
 # Pretrained Models
+## ASVspoof 21 LA and DF. Format: best (mean)
 | Remark  | Front-end    | Back-end Model | Back-end Parameters | CKPT Avg. | ASVspoof 2021 LA | ASVspoof 2021 **DF**                       |
 |---------|-------------|----------------|---------------------|-----------|------------------|--------------------------------------------|
 | 2022    | wav2vec 2.0 | FIR-NB         | -                   | -         | 3.54             | 6.18                                       |
@@ -44,8 +45,22 @@ arXiv Link: To add
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | 3         | 1.66 (1.87)      | 1.54 (1.98)                                |
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | 5         | 1.88 (2.00)      | **1.49 (1.78)** [Google Drive for 1.49%]() |
 
-* Only best model checkpoints are provided.
+## In-the-Wild. Format: best (mean)
+| Year | Back-end          | EER         |
+|------|------------------|------------|
+| 2022 | AASIST [15]      | 10.46      |
+| 2024 | SLIM [14]        | 12.5       |
+| 2024 | MoE [65]         | 9.17       |
+| 2024 | Conformer [59]   | 8.42       |
+| 2024 | TCM [29]         | 7.79       |
+| 2024 | OCKD [66]        | 7.68       |
+| 2024 | SLS [32]        | 7.46       |
+| 2024 | Pascu et al. [68]| 7.2        |
+| 2025 | Mamba [17]       | 6.71       |
+| 2025 | LSR+LSA [67]     | 5.92       |
+| -    | **Proposed Nes2Net-X** | **5.52 (6.60)** [Google Drive for 5.52%]() |
 
+* Only best model checkpoints are provided.
 
 
 # Prepare:
@@ -99,30 +114,25 @@ arXiv Link: To add
      ```
      CUDA_VISIBLE_DEVICES=0 python easy_inference_demo.py \
      --model_path "/data/tianchi/Nes2Net_SVDD_ckpts/WavLM_Nes2Net_X_SeLU_e74_seed420_valid0.04245662278274772.pt" \
-     --file_to_test "/home/tianchi/data/SVDD2024/test_set/CtrSVDD_0115_E_0092590.flac" \
-     --model_name WavLM_Nes2Net_X_SeLU
+     --file_to_test "/home/tianchi/Nes2Net_ASVspoof_ITW/database/LA/ASVspoof2019_LA_dev/flac/LA_D_1000265.flac" \
+     --model_name WavLM_Nes2Net_X
      ```
      
-  2. If you want to train the model by yourself:
-     check the command template in: 
-          ```
-          train.sh
-          ```
+  2. If you want to train the model by yourself on ASVspoof19 dataset:
+     check the command template: 
+     ```
+     python main.py --track=LA --lr=0.00000025 --batch_size=12 --loss=WCE --algo 4 --date 0520 \
+     --model_name wav2vec2_Nes2Net_X --seed 12345 --num_epochs 100 --pool_func 'mean' --SE_ratio 1 \
+     --database_path /home/tianchi/SSL_Anti-spoofing/database/LA/
+     ```
+     * Change the ```--database_path``` to your ASVspoof dataset path. 
 
-     Following is an example:
-     ```
-     python train.py --base_dir /home/tianchi/data/SVDD2024/ --algo 8 --gpu_id 2 --T_max 5 --epochs 75 --lr 0.000001 --batch_size 34 \
-     --agg SEA --pool_func 'mean' --dilation 1 --Nes_ratio 8 8 --SE_ratio 1 --model_name WavLM_Nes2Net_X --seed 420 \
-     --foldername WavLM_SEA_Nes2Net_X_mean_8x8_SEr1_dila1_algo8_Tmax5_bz34_lr1e6_seed420
-     ```
-     * Change the ```--base_dir``` to your SVDD2024 dataset path. 
-     * The ```--foldername``` can be set according to your preference. 
      
-  3. If you want to test on the CtrSVDD dataset using the released pre-trained models or your own trained model:
+  3. If you want to test on the ASVspoof 21 LA or DF dataset using the released pre-trained models or your own trained model:
      check the command template in: 
-          ```
-          eval.sh
-          ```
+     ```
+     test.sh
+     ```
 
      Following is an example:
      ```
@@ -147,27 +157,19 @@ arXiv Link: To add
      python EER_minDCF.py --labels_file '/home/tianchi/data/SVDD2024/test.txt' \
      --path scores/E75_WavLM_SEA_Nes2Net_X_mean_8x8_SEr1_dila1_algo8_Tmax5_bz34_lr1e6_seed420.txt
      ```
-     Example output:
-     ```
-     ---------------------------------------------------------
-     dataset m4singer - EER: 2.4536%  minDCF: 0.024288
-     dataset kising - EER: 8.6851%  minDCF: 0.085662
-     ---------------------------------------------------------
-     excluding A14 only, #: 67579
-     - EER: 2.2230%  minDCF: 0.022174
-          ---------------------------------------------------------
-     excluding both acesinger and A14, #: 64734
-     - EER: 2.4782%  minDCF: 0.024745
-     (atkID A09) - EER: 1.2288%  minDCF: 0.011929
-     (atkID A10) - EER: 0.6305%  minDCF: 0.006173
-     (atkID A11) - EER: 2.0893%  minDCF: 0.018279
-     (atkID A12) - EER: 5.2686%  minDCF: 0.051162
-     (atkID A13) - EER: 0.8284%  minDCF: 0.008284
-     ---------------------------------------------------------
-     ```
-       Also note that above hyperparameters for Nes2Net series models and AASIST series models are different. 
-          Please check the examples in ```train.sh``` and ```eval.sh```. 
+  4. If you want to test on the In-the-Wild dataset using the released pre-trained models or your own trained model:
 
+     scoring:
+     ```
+     python Cal_EER_in_the_wild.py --path [path to score txt] 
+     ```
+     For example:
+     ```
+     python Cal_EER_in_the_wild.py --path Test_full_ITW_e68_74_76_90_100_1203_eff_wav2vec2_Nes2Net_SE_cat_e120_bz12_lr2_5e_07_algo4_seed12345.txt
+     ```
+  6. If you want to test with averaged checkpoints:
+     
+     
 
 # Reference Repo
 Thanks for following open-source projects:
