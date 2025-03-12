@@ -123,8 +123,9 @@ arXiv Link: To add
   2. If you want to train the model by yourself on ASVspoof19 dataset:
      check the command template: 
      ```
-     python main.py --track=LA --lr=0.00000025 --batch_size=12 --loss=WCE --algo 4 --date 0520 \
-     --model_name wav2vec2_Nes2Net_X --seed 12345 --num_epochs 100 --pool_func 'mean' --SE_ratio 1 --Nes_ratio 8 8 \
+     CUDA_VISIBLE_DEVICES=0 python main.py --track=LA --lr=0.00000025 --batch_size=12 --loss=WCE \
+     --algo 4 --date 0520 --seed 12345 \
+     --model_name wav2vec2_Nes2Net_X --num_epochs 100 --pool_func 'mean' --SE_ratio 1 --Nes_ratio 8 8 \
      --database_path /home/tianchi/SSL_Anti-spoofing/database/LA/
      ```
      * Change the ```--database_path``` to your ASVspoof dataset path. 
