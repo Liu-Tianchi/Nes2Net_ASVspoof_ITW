@@ -39,8 +39,8 @@ arXiv Link: To add
 | 2025    | wav2vec 2.0 | LSR+LSA        | -                   | -         | 1.19             | 2.43                                       |
 | 2025    | wav2vec 2.0 | Mamba          | 1,937k              | 5         | 0.93             | 1.88                                       |
 | 2022    | wav2vec 2.0 | AASIST         | 447k                | N/A       | **0.82 (1.00)**  | 2.85 (3.69)                                |
-| re-imp  | wav2vec 2.0 | AASIST (algo4) | 447k                | N/A       | 1.13 (1.36)      | 3.37 (4.09)                                |
-| re-imp  | wav2vec 2.0 | AASIST (algo5) | 447k                | N/A       | 0.93 (1.40)      | 3.56 (5.07)                                |
+| reproduce  | wav2vec 2.0 | AASIST (algo4) | 447k                | N/A       | 1.13 (1.36)      | 3.37 (4.09)                                |
+| reproduce  | wav2vec 2.0 | AASIST (algo5) | 447k                | N/A       | 0.93 (1.40)      | 3.56 (5.07)                                |
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | N/A       | 1.73 (1.95)      | 1.65 (1.91) [Google Drive for 1.65%: [ckpt](), [score file]()]     |
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | 3         | 1.66 (1.87)      | 1.54 (1.98)                                |
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | 5         | 1.88 (2.00)      | **1.49 (1.78)** [Google Drive for 1.49%: [ckpt](), [score file]()] |
