@@ -121,17 +121,18 @@ arXiv Link: To add
      ```
      
   2. If you want to train the model by yourself on ASVspoof19 dataset:
+     
      check the command template: 
      ```
-     CUDA_VISIBLE_DEVICES=0 python main.py --track=LA --lr=0.00000025 --batch_size=12 --loss=WCE \
-     --algo 4 --date 0520 --seed 12345 \
-     --model_name wav2vec2_Nes2Net_X --num_epochs 100 --pool_func 'mean' --SE_ratio 1 --Nes_ratio 8 8 \
+     CUDA_VISIBLE_DEVICES=0 python main.py --track=LA --lr=0.00000025 --batch_size=12 \
+     --algo 4 --date 0520 --seed 12345 --loss=WCE --model_name wav2vec2_Nes2Net_X \
+     --num_epochs 100 --pool_func 'mean' --SE_ratio 1 --Nes_ratio 8 8 \
      --database_path /home/tianchi/SSL_Anti-spoofing/database/LA/
      ```
      * Change the ```--database_path``` to your ASVspoof dataset path. 
 
      
-  3. If you want to test on the ASVspoof 21 LA or DF dataset using the released pre-trained models or your own trained model:
+  4. If you want to test on the ASVspoof 21 LA or DF dataset using the released pre-trained models or your own trained model:
      
      check the command template in: 
      ```
