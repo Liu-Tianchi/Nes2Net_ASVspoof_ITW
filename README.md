@@ -58,7 +58,9 @@ arXiv Link: To add
 | 2024 | Pascu et al. [68]| 7.2        |
 | 2025 | Mamba [17]       | 6.71       |
 | 2025 | LSR+LSA [67]     | 5.92       |
-| -    | **Proposed Nes2Net-X** | **5.52 (6.60)** [Google Drive for 5.52%: [ckpt](), [score file](https://drive.google.com/file/d/12vzWxsVUAgmayk2WYfurib-qmNKMHjL2/view?usp=sharing)] |
+| -    | **Proposed Nes2Net-X w/o Val Aug.** | **5.52 (6.60)** [Google Drive for 5.52%: [ckpt](), [score file](https://drive.google.com/file/d/12vzWxsVUAgmayk2WYfurib-qmNKMHjL2/view?usp=sharing)] |
+| -    | **Proposed Nes2Net-X w/ Val Aug.** | **5.15 (6.31)** [Google Drive for 5.15%: [ckpt](), [score file]()] |
+
 
 * Only best model checkpoints are provided.
 
