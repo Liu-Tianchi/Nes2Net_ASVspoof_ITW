@@ -193,9 +193,9 @@ if __name__ == '__main__':
 
     # define model saving path
     if args.algo < 10:
-        model_tag = '{}_eff_{}_e{}_bz{}_lr{}_algo{}_seed{}'.format(args.date, args.model_name, args.num_epochs, args.batch_size, args.lr, args.algo, args.seed)
+        model_tag = '{}_{}_e{}_bz{}_lr{}_algo{}_seed{}'.format(args.date, args.model_name, args.num_epochs, args.batch_size, args.lr, args.algo, args.seed)
     else:  # ratio based augmentation approach @ Tianchi
-        model_tag = '{}_eff_{}_e{}_bz{}_lr{}_algo{}_LnL{}_ISD{}_SSI{}'.format(args.date, args.model_name, args.num_epochs, args.batch_size, args.lr, args.algo, int(args.LnL_ratio*10), int(args.ISD_ratio*10), int(args.SSI_ratio*10))
+        model_tag = '{}_{}_e{}_bz{}_lr{}_algo{}_LnL{}_ISD{}_SSI{}'.format(args.date, args.model_name, args.num_epochs, args.batch_size, args.lr, args.algo, int(args.LnL_ratio*10), int(args.ISD_ratio*10), int(args.SSI_ratio*10))
     if args.comment:
         model_tag = model_tag + '_{}'.format(args.comment)
     model_save_path = os.path.join('models', model_tag)
