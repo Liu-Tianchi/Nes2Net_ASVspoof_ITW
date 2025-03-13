@@ -58,8 +58,8 @@ arXiv Link: To add
 | 2024 | Pascu et al. [68]| 7.2        |
 | 2025 | Mamba [17]       | 6.71       |
 | 2025 | LSR+LSA [67]     | 5.92       |
-| -    | **Proposed Nes2Net-X w/o Val Aug.** | **5.52 (6.60)** [Google Drive for 5.52%: [ckpt](), [score file](https://drive.google.com/file/d/12vzWxsVUAgmayk2WYfurib-qmNKMHjL2/view?usp=sharing)] |
-| -    | **Proposed Nes2Net-X w/ Val Aug.** | **5.15 (6.31)** [Google Drive for 5.15%: [ckpt](), [score file]()] |
+| -    | **Proposed Nes2Net-X w/o Val Aug.** | **5.52 (6.60)** [Google Drive for 5.52%: [ckpt](https://drive.google.com/file/d/1rKuzoo-Trngjae8sPOduxG9jofgcVkRz/view?usp=sharing), [score file](https://drive.google.com/file/d/12vzWxsVUAgmayk2WYfurib-qmNKMHjL2/view?usp=sharing)] |
+| -    | **Proposed Nes2Net-X w/ Val Aug.** | **5.15 (6.31)** [Google Drive for 5.15%: [ckpt](https://drive.google.com/file/d/14YD8A54HLkXzlp7PWZ5iTW56WmQTIeEy/view?usp=sharing), [score file](https://drive.google.com/file/d/1Xx43lvq6xjEMgt8_Eq6NrWYQfkeUXsvo/view?usp=sharing)] |
 
 
 * Only best model checkpoints are provided.
@@ -104,7 +104,7 @@ arXiv Link: To add
 # Usage （To update):
 
   1. If you want to easy inference with pre-ptrained model:
-     1. Download the pretrained checkpoints from above table Google Drive links. For example, WavLM_Nes2Net_X_SeLU.
+     1. Download the pretrained checkpoints from above table Google Drive links. For example, WavLM_Nes2Net_X.
      2. Run 
      ```
      CUDA_VISIBLE_DEVICES=0 python easy_inference_demo.py \
