@@ -139,31 +139,25 @@ arXiv Link: To add
   test.sh
   ```
   1. For single model or averaged pretrained model:
-     For the ASVspoof 21 LA:
+     For the ASVspoof 21 LA, an example:
      ```
      python main.py --track=LA --batch_size=2 --is_eval --eval --model_name wav2vec2_Nes2Net_X --pool_func 'mean' --SE_ratio 1 --Nes_ratio 8 8 --test_protocol '4sec' \
      --database_path '/home/tianchi/database/LA/' \
-     --model_path="/home/tianchi/Nes2Net_ASVspoof_ITW/wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_ep95.pth" \
+     --model_path="./wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_ep95.pth" \
      --eval_output='score_LA_wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_ep95.txt'
      ```
      For the ASVspoof 21 DF, change the above command with:
      ```
      --track=DF
      ```
- 2. For average checkpoints and then test, an example:
-    ```
-    python main.py --track=DF --batch_size=2 --is_eval --eval --model_name wav2vec2_Nes2Net_X --pool_func 'mean' --SE_ratio 1 --Nes_ratio 8 8 --test_protocol '4sec' \
-    --num_average_model 5 --model_ID_to_average 56 60 62 76 95 \
-    --database_path '/home/tianchi/database/LA/' \
-    --model_folder_path="/home/tianchi/SSL_Anti-spoofing/models/wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4" \
-    --eval_output='score_DF_wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_avg_ckpt_ep56_60_62_76_95.txt'
-    ```
+     For already averaged model, simply change the model path:
+     ```
+     --model_path="./wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_seed12345_avg_ckpt_ep59_61_69.pth" \
+     ```
      * Change the ```--database_path``` to your ASVspoof dataset path. 
      * Change the ```--model_path``` to your path of the checkpoint to test. You may use the checkpoint with the smallest validation EER for testing.
-     * If you use checkpoints average function, choose the serveral smallest validation EER for testing,and change the ```--model_folder_path```.
-     * Change the ``` --pool_func --Nes_ratio --SE_ratio --model_name``` to match your training setting. 
-     * If you are using the pretrained model, these configs are the same as default.
- 
+     * if you wish to average checkpoints and then test, pls refer to point 3 below
+    
      And then, to get the final result of EER and minDCF:
      ```
      txtpath=score_LA_wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_ep95.txt
@@ -174,18 +168,48 @@ arXiv Link: To add
      txtpath=score_DF_wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_ep95.txt
      python evaluate_2021_DF.py $txtpath /home/tianchi/database/keys eval
      ``` 
+     
+ 3. For averaging checkpoints and then test, an example:
+    ```
+    python main.py --track=DF --batch_size=2 --is_eval --eval --model_name wav2vec2_Nes2Net_X --pool_func 'mean' --SE_ratio 1 --Nes_ratio 8 8 --test_protocol '4sec' \
+    --num_average_model 5 --model_ID_to_average 56 60 62 76 95 \
+    --database_path '/home/tianchi/database/LA/' \
+    --model_folder_path="/home/tianchi/SSL_Anti-spoofing/models/wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4" \
+    --eval_output='score_DF_wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_avg_ckpt_ep56_60_62_76_95.txt'
+    ```
+     * If you use checkpoints average function, choose the serveral epochs with smallest validation EERs for testing according to validation EER, and set as ``` --model_ID_to_average```.
+     * change the ```--model_folder_path``` to the path of the folder that saving all checkpoints.
+     * Change the ``` --pool_func --Nes_ratio --SE_ratio --model_name``` to match your training setting. 
+     * If you are using the pretrained model, these configs are the same as default.
+ 
+    And then, similar as that of point 2 above, following the examples to get the EER and minDCF from the score text file.
+
 
 ## If you want to test on the In-the-Wild dataset using the released pre-trained models or your own trained model:
-
-  scoring:
+  1. For single model or averaged pretrained model:
+     The same as the command above for ASVspoof 21LA and DF, just change the ```--track=in_the_wild``` and ```--in_the_wild_path```, following is anexnample:
+     ```
+     python main.py --track=in_the_wild --batch_size=2 --is_eval --eval --model_name wav2vec2_Nes2Net_X --pool_func 'mean' --SE_ratio 1 --test_protocol 'full' \
+     --in_the_wild_path='/home/tianchi/SSL_Anti-spoofing/database/release_in_the_wild' \
+     --model_path="/home/tianchi/SSL_Anti-spoofing/models/wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_seed12345/wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_seed12345_avg_ckpt_ep59_61_69.pth" \
+     --eval_output='score_ITW_wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_seed12345_avg_ckpt_ep59_61_69.txt' \
+     ```
+  3. Similarly, you can also average checkpoints and then test, an example:
+     ```
+     python main.py --track=in_the_wild --batch_size=2 --is_eval --eval --model_name wav2vec2_Nes2Net_X --pool_func 'mean' --SE_ratio 1 --test_protocol 'full' \
+     --num_average_model 3 --model_ID_to_average 59 61 69 \
+     --in_the_wild_path='/home/tianchi/SSL_Anti-spoofing/database/release_in_the_wild' \
+     --model_folder_path="/home/tianchi/SSL_Anti-spoofing/models/wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_seed12345" \
+     --eval_output='score_ITW_wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_seed12345_avg_ckpt_ep59_61_69.txt' \
+     ```
+  5. scoring:
      ```
      python Cal_EER_in_the_wild.py --path [path to score txt] 
      ```
-  For example:
+     For example:
      ```
-     python Cal_EER_in_the_wild.py --path Test_full_ITW_e68_74_76_90_100_1203_eff_wav2vec2_Nes2Net_SE_cat_e120_bz12_lr2_5e_07_algo4_seed12345.txt
+     python Cal_EER_in_the_wild.py --path score_ITW_wav2vec2_Nes2Net_X_e100_bz12_lr2.5e_07_algo4_seed12345_avg_ckpt_ep59_61_69.txt
      ```
-## If you want to test with averaged checkpoints:
      
      
 
