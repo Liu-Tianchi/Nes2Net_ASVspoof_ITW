@@ -42,6 +42,7 @@ arXiv Link: To add
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | N/A       | 1.73 (1.95)      | 1.65 (1.91) [Google Drive for 1.65%: [ckpt](https://drive.google.com/file/d/1tjuSdbzgCnJSfy_eE_P52jRAonHY4YUT/view?usp=sharing), [score file](https://drive.google.com/file/d/1-bgVLjCTCXxsJHuEpipB1A3hwdDaj2c6/view?usp=sharing)]     |
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | 3         | 1.66 (1.87)      | 1.54 (1.98)                                |
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | 5         | 1.88 (2.00)      | **1.49 (1.78)** [Google Drive for 1.49%: [ckpt](https://drive.google.com/file/d/1JFGv_2TONMnTLGbiOIuHFfMvuo4SIIpg/view?usp=sharing), [score file](https://drive.google.com/file/d/1UbQBoddwtMgGee4BYPHNPb5JwaPEcDtw/view?usp=sharing)] |
+
 ※: with extra data augmentation.
 
 ## In-the-Wild. Format: best (mean)
@@ -61,6 +62,7 @@ arXiv Link: To add
 | 2025 | LSR+LSA ※    | 5.54 ※     |
 | -    | **Proposed Nes2Net-X w/o Val Aug.** | **5.52 (6.60)** [Google Drive for 5.52%: [ckpt](https://drive.google.com/file/d/1rKuzoo-Trngjae8sPOduxG9jofgcVkRz/view?usp=sharing), [score file](https://drive.google.com/file/d/12vzWxsVUAgmayk2WYfurib-qmNKMHjL2/view?usp=sharing)] |
 | -    | **Proposed Nes2Net-X w/ Val Aug.** | **5.15 (6.31)** [Google Drive for 5.15%: [ckpt](https://drive.google.com/file/d/14YD8A54HLkXzlp7PWZ5iTW56WmQTIeEy/view?usp=sharing), [score file](https://drive.google.com/file/d/1Xx43lvq6xjEMgt8_Eq6NrWYQfkeUXsvo/view?usp=sharing)] |
+
 ※: with extra data augmentation.
 
 * Only best model checkpoints are provided.
