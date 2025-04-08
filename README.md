@@ -32,6 +32,9 @@ arXiv Link: To add
 | 2024    | wav2vec 2.0 | TCM            | 2,383k              | 5         | 1.03             | 2.06                                       |
 | 2024    | wav2vec 2.0 | SLS            | 23,399k             | -         | 2.87 (3.88)      | 1.92 (2.09)                                |
 | 2025    | wav2vec 2.0 | LSR+LSA        | -                   | -         | 1.19             | 2.43                                       |
+| 2025    | wav2vec 2.0 | LSR+LSA ※      | -                   | -         | 1.05 ※           | 1.86 ※                                     |
+| 2025    | wav2vec 2.0 | conf. ensemble | -                   | -         | -                | 2.03                                       |
+| 2025    | wav2vec 2.0 | WaveSpec       | -                   | -         | -                | 1.90                                       |
 | 2025    | wav2vec 2.0 | Mamba          | 1,937k              | 5         | 0.93             | 1.88                                       |
 | 2022    | wav2vec 2.0 | AASIST         | 447k                | N/A       | **0.82 (1.00)**  | 2.85 (3.69)                                |
 | reproduce  | wav2vec 2.0 | AASIST (algo4) | 447k                | N/A       | 1.13 (1.36)      | 3.37 (4.09)                                |
@@ -39,23 +42,26 @@ arXiv Link: To add
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | N/A       | 1.73 (1.95)      | 1.65 (1.91) [Google Drive for 1.65%: [ckpt](https://drive.google.com/file/d/1tjuSdbzgCnJSfy_eE_P52jRAonHY4YUT/view?usp=sharing), [score file](https://drive.google.com/file/d/1-bgVLjCTCXxsJHuEpipB1A3hwdDaj2c6/view?usp=sharing)]     |
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | 3         | 1.66 (1.87)      | 1.54 (1.98)                                |
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | 5         | 1.88 (2.00)      | **1.49 (1.78)** [Google Drive for 1.49%: [ckpt](https://drive.google.com/file/d/1JFGv_2TONMnTLGbiOIuHFfMvuo4SIIpg/view?usp=sharing), [score file](https://drive.google.com/file/d/1UbQBoddwtMgGee4BYPHNPb5JwaPEcDtw/view?usp=sharing)] |
+※: with extra data augmentation.
 
 ## In-the-Wild. Format: best (mean)
 | Year | Back-end          | EER         |
 |------|------------------|------------|
-| 2022 | AASIST [15]      | 10.46      |
-| 2024 | SLIM [14]        | 12.5       |
-| 2024 | MoE [65]         | 9.17       |
-| 2024 | Conformer [59]   | 8.42       |
-| 2024 | TCM [29]         | 7.79       |
-| 2024 | OCKD [66]        | 7.68       |
-| 2024 | SLS [32]        | 7.46       |
-| 2024 | Pascu et al. [68]| 7.2        |
-| 2025 | Mamba [17]       | 6.71       |
-| 2025 | LSR+LSA [67]     | 5.92       |
+| 2022 | AASIST       | 10.46      |
+| 2024 | SLIM         | 12.5       |
+| 2024 | MoE          | 9.17       |
+| 2024 | Conformer    | 8.42       |
+| 2024 | TCM          | 7.79       |
+| 2024 | OCKD         | 7.68       |
+| 2024 | SLS          | 7.46       |
+| 2024 | Pascu et al. | 7.2        |
+| 2025 | Mamba        | 6.71       |
+| 2025 | WaveSpec     | 6.71       |
+| 2025 | LSR+LSA      | 5.92       |
+| 2025 | LSR+LSA ※    | 5.54 ※     |
 | -    | **Proposed Nes2Net-X w/o Val Aug.** | **5.52 (6.60)** [Google Drive for 5.52%: [ckpt](https://drive.google.com/file/d/1rKuzoo-Trngjae8sPOduxG9jofgcVkRz/view?usp=sharing), [score file](https://drive.google.com/file/d/12vzWxsVUAgmayk2WYfurib-qmNKMHjL2/view?usp=sharing)] |
 | -    | **Proposed Nes2Net-X w/ Val Aug.** | **5.15 (6.31)** [Google Drive for 5.15%: [ckpt](https://drive.google.com/file/d/14YD8A54HLkXzlp7PWZ5iTW56WmQTIeEy/view?usp=sharing), [score file](https://drive.google.com/file/d/1Xx43lvq6xjEMgt8_Eq6NrWYQfkeUXsvo/view?usp=sharing)] |
-
+※: with extra data augmentation.
 
 * Only best model checkpoints are provided.
 
