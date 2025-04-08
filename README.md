@@ -1,11 +1,11 @@
 # 🔥🔥🔥Nes2Net: A Lightweight Nested Architecture for Foundation Model Driven Speech Anti-spoofing
 Official release of pretrained models and scripts for "Nes2Net: A Lightweight Nested Architecture for Foundation Model Driven Speech Anti-spoofing"
 
-**This repo is for the **ASVspoof** and **In-the-Wild** dataset.**
+**This repo is for the **ASVspoof 19/21** and **In-the-Wild** dataset.**
 
 For the Controlled Singing Voice Deepfake Detection (CtrSVDD) dataset: https://github.com/Liu-Tianchi/Nes2Net
 
-For the **PartialSpoof** dataset: Coming soon
+For the **ASVspoof 5** dataset: Coming soon
 
 arXiv Link: To add
 
@@ -37,11 +37,11 @@ arXiv Link: To add
 | 2025    | wav2vec 2.0 | WaveSpec       | -                   | -         | -                | 1.90                                       |
 | 2025    | wav2vec 2.0 | Mamba          | 1,937k              | 5         | 0.93             | 1.88                                       |
 | 2022    | wav2vec 2.0 | AASIST         | 447k                | N/A       | **0.82 (1.00)**  | 2.85 (3.69)                                |
-| reproduce  | wav2vec 2.0 | AASIST (algo4) | 447k                | N/A       | 1.13 (1.36)      | 3.37 (4.09)                                |
-| reproduce  | wav2vec 2.0 | AASIST (algo5) | 447k                | N/A       | 0.93 (1.40)      | 3.56 (5.07)                                |
-| **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | N/A       | 1.73 (1.95)      | 1.65 (1.91) [Google Drive for 1.65%: [ckpt](https://drive.google.com/file/d/1tjuSdbzgCnJSfy_eE_P52jRAonHY4YUT/view?usp=sharing), [score file](https://drive.google.com/file/d/1-bgVLjCTCXxsJHuEpipB1A3hwdDaj2c6/view?usp=sharing)]     |
-| **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | 3         | 1.66 (1.87)      | 1.54 (1.98)                                |
-| **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k                | 5         | 1.88 (2.00)      | **1.49 (1.78)** [Google Drive for 1.49%: [ckpt](https://drive.google.com/file/d/1JFGv_2TONMnTLGbiOIuHFfMvuo4SIIpg/view?usp=sharing), [score file](https://drive.google.com/file/d/1UbQBoddwtMgGee4BYPHNPb5JwaPEcDtw/view?usp=sharing)] |
+| reproduce  | wav2vec 2.0 | AASIST (algo4) | 447k             | N/A       | 1.13 (1.36)      | 3.37 (4.09)                                |
+| reproduce  | wav2vec 2.0 | AASIST (algo5) | 447k             | N/A       | 0.93 (1.40)      | 3.56 (5.07)                                |
+| **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k               | N/A       | 1.73 (1.95)      | 1.65 (1.91) [Google Drive for 1.65%: [ckpt](https://drive.google.com/file/d/1tjuSdbzgCnJSfy_eE_P52jRAonHY4YUT/view?usp=sharing), [score file](https://drive.google.com/file/d/1-bgVLjCTCXxsJHuEpipB1A3hwdDaj2c6/view?usp=sharing)]     |
+| **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k               | 3         | 1.66 (1.87)      | 1.54 (1.98)                                |
+| **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k               | 5         | 1.88 (2.00)      | **1.49 (1.78)** [Google Drive for 1.49%: [ckpt](https://drive.google.com/file/d/1JFGv_2TONMnTLGbiOIuHFfMvuo4SIIpg/view?usp=sharing), [score file](https://drive.google.com/file/d/1UbQBoddwtMgGee4BYPHNPb5JwaPEcDtw/view?usp=sharing)] |
 
 ※: with extra data augmentation.
 
