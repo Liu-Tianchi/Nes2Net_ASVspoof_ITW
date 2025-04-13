@@ -7,7 +7,7 @@ For the Controlled Singing Voice Deepfake Detection (CtrSVDD) dataset: https://g
 
 For the **ASVspoof 5** dataset: Coming soon
 
-arXiv Link: To add
+arXiv Link: https://arxiv.org/abs/2504.05657
 
 # Update:
 
@@ -224,5 +224,10 @@ Thanks for following open-source projects:
 
 # Cite
 ```  
-To add
+@article{liu2025nes2net,
+  title={Nes2Net: A Lightweight Nested Architecture for Foundation Model Driven Speech Anti-spoofing},
+  author={Liu, Tianchi and Truong, Duc-Tuan and Das, Rohan Kumar and Lee, Kong Aik and Li, Haizhou},
+  journal={arXiv preprint arXiv:2504.05657},
+  year={2025}
+}
 ```
