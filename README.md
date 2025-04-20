@@ -1,7 +1,7 @@
 # ASVspoof5 Experiment
 
 ## Pretrained Model
-We have uploaded pretrained models of our experiments. You can download pretrained models from [TBA](TBA). 
+We have uploaded pretrained models of our experiments. You can download pretrained models from [OneDrive](https://entuedu-my.sharepoint.com/:u:/g/personal/truongdu001_e_ntu_edu_sg/EaBasBsecRpErWEVzXdht7cBiWWYFuLTeXt11ABbHX9yBg?e=vxVOOI). 
 
 ## Setting up environment
 ```
