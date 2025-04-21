@@ -13,17 +13,13 @@ This repository supports the following datasets:
 
 ## 🌿 Branch Overview
 
-- **Main Branch （Current Branch)**  
-  For **ASVspoof 2019/2021** and **In-the-Wild** datasets:  
-  👉 [main](https://github.com/Liu-Tianchi/Nes2Net_ASVspoof_ITW/tree/main)
+- **Main Branch (Current Branch)**: For **ASVspoof 2019/2021** and **In-the-Wild** datasets  
 
-- **asvspoof5 Branch**  
-  For the **ASVspoof 5** dataset:  
-  👉 [asvspoof5](https://github.com/Liu-Tianchi/Nes2Net_ASVspoof_ITW/tree/asvspoof5)
+- **asvspoof5 Branch**: For the **ASVspoof 5** dataset 👉 [asvspoof5 branch](https://github.com/Liu-Tianchi/Nes2Net_ASVspoof_ITW/tree/asvspoof5)
 
 
 # Update:
-🔥[April 20, 2025] ASVspoof 5 pretrained model and codes are now avaiable!!! 👉 [asvspoof5](https://github.com/Liu-Tianchi/Nes2Net_ASVspoof_ITW/tree/asvspoof5)
+🔥[April 20, 2025] ASVspoof 5 pretrained model and scripts are now avaiable!
 
 # Pretrained Models
 ## ASVspoof 21 LA and DF. Format: best (mean)
