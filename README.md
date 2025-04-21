@@ -13,7 +13,7 @@ This repository supports the following datasets:
 
 ## 🌿 Branch Overview
 
-- **Main Branch**  
+- **Main Branch （Current Branch)**  
   For **ASVspoof 2019/2021** and **In-the-Wild** datasets:  
   👉 [main](https://github.com/Liu-Tianchi/Nes2Net_ASVspoof_ITW/tree/main)
 
