@@ -1,16 +1,31 @@
 # 🔥🔥🔥Nes2Net: A Lightweight Nested Architecture for Foundation Model Driven Speech Anti-spoofing
-Official release of pretrained models and scripts for "Nes2Net: A Lightweight Nested Architecture for Foundation Model Driven Speech Anti-spoofing"
 
-**This repo is for the **ASVspoof 19/21** and **In-the-Wild** dataset.**
+Welcome to the official release of pretrained models and scripts for **Nes2Net**, a lightweight nested architecture designed for foundation model-driven speech anti-spoofing, as described in our paper:
 
-For the Controlled Singing Voice Deepfake Detection (CtrSVDD) dataset: https://github.com/Liu-Tianchi/Nes2Net
+📄 **arXiv**: [https://arxiv.org/abs/2504.05657](https://arxiv.org/abs/2504.05657)
 
-For the **ASVspoof 5** dataset: checkout [asvspoof5](https://github.com/Liu-Tianchi/Nes2Net_ASVspoof_ITW/tree/asvspoof5) branch
+## 📁 Supported Datasets
 
-arXiv Link: https://arxiv.org/abs/2504.05657
+This repository supports the following datasets:
+
+- **ASVspoof 2019 / 2021**
+- **ASVspoof 5**
+- **In-the-Wild**
+- **Controlled Singing Voice Deepfake Detection (CtrSVDD)**: [View here](https://github.com/Liu-Tianchi/Nes2Net)
+
+## 🌿 Branch Overview
+
+- **Main Branch**  
+  For **ASVspoof 2019/2021** and **In-the-Wild** datasets:  
+  👉 [main](https://github.com/Liu-Tianchi/Nes2Net_ASVspoof_ITW/tree/main)
+
+- **asvspoof5 Branch**  
+  For the **ASVspoof 5** dataset:  
+  👉 [asvspoof5](https://github.com/Liu-Tianchi/Nes2Net_ASVspoof_ITW/tree/asvspoof5)
+
 
 # Update:
-
+🔥[April 20, 2025] ASVspoof 5 pretrained model and codes are now avaiable!!! 👉 [asvspoof5](https://github.com/Liu-Tianchi/Nes2Net_ASVspoof_ITW/tree/asvspoof5)
 
 # Pretrained Models
 ## ASVspoof 21 LA and DF. Format: best (mean)
