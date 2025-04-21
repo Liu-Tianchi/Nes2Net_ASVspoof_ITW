@@ -15,7 +15,7 @@ This repository supports the following datasets:
 
 - **Main Branch (Current Branch)**: For **ASVspoof 2019/2021** and **In-the-Wild** datasets  
 
-- **asvspoof5 Branch**: For the **ASVspoof 5** dataset 👉 [asvspoof5 branch](https://github.com/Liu-Tianchi/Nes2Net_ASVspoof_ITW/tree/asvspoof5)
+- **Asvspoof5 Branch**: For the **ASVspoof 5** dataset 👉 [asvspoof5 branch](https://github.com/Liu-Tianchi/Nes2Net_ASVspoof_ITW/tree/asvspoof5)
 
 
 # Update:
