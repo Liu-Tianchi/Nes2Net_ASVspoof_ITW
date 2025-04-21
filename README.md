@@ -1,8 +1,6 @@
 # 🔥🔥🔥Nes2Net: A Lightweight Nested Architecture for Foundation Model Driven Speech Anti-spoofing
 
-Welcome to the official release of pretrained models and scripts for **Nes2Net**, a lightweight nested architecture designed for foundation model-driven speech anti-spoofing, as described in our paper:
-
-📄 **arXiv**: [https://arxiv.org/abs/2504.05657](https://arxiv.org/abs/2504.05657)
+Welcome to the official release of pretrained models and scripts for **Nes2Net**, a lightweight nested architecture designed for foundation model-driven speech anti-spoofing, as described in our paper [![arXiv](https://img.shields.io/badge/arXiv-2504.05657-b31b1b.svg)](https://arxiv.org/abs/2504.05657)
 
 ## 📁 Supported Datasets
 
