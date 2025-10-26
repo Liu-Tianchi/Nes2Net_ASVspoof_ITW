@@ -28,10 +28,11 @@ This repository supports the following datasets:
 | 2022    | wav2vec 2.0 | FIR-NB         | -                   | -         | 3.54             | 6.18                                       |
 | 2022    | wav2vec 2.0 | FIR-WB         | -                   | -         | 7.08             | 4.98                                       |
 | 2022    | wav2vec 2.0 | LGF            | -                   | -         | 9.66             | 4.75                                       |
-| 2023    | wav2vec 2.0 | Conformer      | 2,51k               | -         | 1.38             | 2.27                                       |
-| 2024    | wav2vec 2.0 | Ensembling     | -                   | -         | 2.32 (4.48)      | 5.60 (8.74)                                |
+| 2023    | wav2vec 2.0 | Conformer(fix) | 2,506k              | -         | 1.38             | 2.27                                       |
+| 2023    | wav2vec 2.0 | Conformer(var) | 2,506k              | -         | 0.87             | 7.36                                       |
+| 2024    | wav2vec 2.0 | Ensembling‡    | -                   | -         | 2.32 (4.48)      | 5.60 (8.74)                                |
 | 2024    | WavLM       | ASP+MLP        | 1,051k              | -         | 3.31             | 4.47                                       |
-| 2024    | wav2vec 2.0 | SLIM           | -                   | -         | -                | 4.4                                        |
+| 2024    | wav2vec 2.0 | SLIM           | -                   | -         | -                | -    (4.4)                                 |
 | 2024    | WavLM       | AttM-LSTM      | 936k                | N/A       | 3.50             | 3.19                                       |
 | 2024    | wav2vec 2.0 | FTDKD          | -                   | -         | 2.96             | 2.82                                       |
 | 2024    | wav2vec 2.0 | AASIST2        | -                   | -         | 1.61             | 2.77                                       |
@@ -42,17 +43,21 @@ This repository supports the following datasets:
 | 2024    | wav2vec 2.0 | SLS            | 23,399k             | -         | 2.87 (3.88)      | 1.92 (2.09)                                |
 | 2025    | wav2vec 2.0 | LSR+LSA        | -                   | -         | 1.19             | 2.43                                       |
 | 2025    | wav2vec 2.0 | LSR+LSA ※      | -                   | -         | 1.05 ※           | 1.86 ※                                     |
-| 2025    | wav2vec 2.0 | conf. ensemble | -                   | -         | -                | 2.03                                       |
 | 2025    | wav2vec 2.0 | WaveSpec       | -                   | -         | -                | 1.90                                       |
 | 2025    | wav2vec 2.0 | Mamba          | 1,937k              | 5         | 0.93             | 1.88                                       |
+| 2025    | wav2vec 2.0 | SSL-EOW-S.‡    | -                   | -         | -                | 1.75 (2.91)                                |
+| 2025    | wav2vec 2.0 | Cal. Ensemble‡ | -                   | -         | -                | -    (2.03)                                |
 | 2022    | wav2vec 2.0 | AASIST         | 447k                | N/A       | **0.82 (1.00)**  | 2.85 (3.69)                                |
 | reproduce  | wav2vec 2.0 | AASIST (algo4) | 447k             | N/A       | 1.13 (1.36)      | 3.37 (4.09)                                |
 | reproduce  | wav2vec 2.0 | AASIST (algo5) | 447k             | N/A       | 0.93 (1.40)      | 3.56 (5.07)                                |
+| **Ours** | wav2vec 2.0 | **Nes2Net**    | 511k               | N/A       | 1.61 (1.90)      | 1.89 (2.12)
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k               | N/A       | 1.73 (1.95)      | 1.65 (1.91) [Google Drive for 1.65%: [ckpt](https://drive.google.com/file/d/1tjuSdbzgCnJSfy_eE_P52jRAonHY4YUT/view?usp=sharing), [score file](https://drive.google.com/file/d/1-bgVLjCTCXxsJHuEpipB1A3hwdDaj2c6/view?usp=sharing)]     |
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k               | 3         | 1.66 (1.87)      | 1.54 (1.98)                                |
 | **Ours** | wav2vec 2.0 | **Nes2Net-X**  | 511k               | 5         | 1.88 (2.00)      | **1.49 (1.78)** [Google Drive for 1.49%: [ckpt](https://drive.google.com/file/d/1JFGv_2TONMnTLGbiOIuHFfMvuo4SIIpg/view?usp=sharing), [score file](https://drive.google.com/file/d/1UbQBoddwtMgGee4BYPHNPb5JwaPEcDtw/view?usp=sharing)] |
 
 ※: with extra data augmentation.
+
+‡: ensemble of multiple models
 
 ## In-the-Wild. Format: best (mean)
 | Year | Back-end          | EER         |
