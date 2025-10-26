@@ -57,18 +57,19 @@ This repository supports the following datasets:
 ## In-the-Wild. Format: best (mean)
 | Year | Back-end          | EER         |
 |------|------------------|------------|
-| 2022 | AASIST       | 10.46      |
-| 2024 | SLIM         | 12.5       |
-| 2024 | MoE          | 9.17       |
-| 2024 | Conformer    | 8.42       |
-| 2024 | TCM          | 7.79       |
-| 2024 | OCKD         | 7.68       |
-| 2024 | SLS          | 7.46       |
-| 2024 | Pascu et al. | 7.2        |
-| 2025 | Mamba        | 6.71       |
-| 2025 | WaveSpec     | 6.71       |
-| 2025 | LSR+LSA      | 5.92       |
-| 2025 | LSR+LSA ※    | 5.54 ※     |
+| 2022 | AASIST       | 10.46       |
+| 2024 | SLIM         | -    (12.5) |
+| 2024 | MoE          | 9.17        |
+| 2024 | Conformer    | 8.42        |
+| 2024 | TCM          | 7.79        |
+| 2024 | OCKD         | 7.68        |
+| 2024 | SLS          | 7.46 (8.87) |
+| 2024 | Pascu et al. | -    (7.2)  |
+| 2025 | Mamba        | 6.71        |
+| 2025 | WaveSpec     | 6.58        |
+| 2025 | LSR+LSA      | 5.92        |
+| 2025 | LSR+LSA ※    | 5.54 ※      |
+| -    | **Proposed Nes2Net w/o Val Aug.**   | 5.80 (7.06)      |
 | -    | **Proposed Nes2Net-X w/o Val Aug.** | **5.52 (6.60)** [Google Drive for 5.52%: [ckpt](https://drive.google.com/file/d/1rKuzoo-Trngjae8sPOduxG9jofgcVkRz/view?usp=sharing), [score file](https://drive.google.com/file/d/12vzWxsVUAgmayk2WYfurib-qmNKMHjL2/view?usp=sharing)] |
 | -    | **Proposed Nes2Net-X w/ Val Aug.** | **5.15 (6.31)** [Google Drive for 5.15%: [ckpt](https://drive.google.com/file/d/14YD8A54HLkXzlp7PWZ5iTW56WmQTIeEy/view?usp=sharing), [score file](https://drive.google.com/file/d/1Xx43lvq6xjEMgt8_Eq6NrWYQfkeUXsvo/view?usp=sharing)] |
 
