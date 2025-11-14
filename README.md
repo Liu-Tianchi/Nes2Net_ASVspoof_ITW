@@ -2,6 +2,8 @@
 
 Welcome to the official release of pretrained models and scripts for **Nes2Net**, a lightweight nested architecture designed for foundation model-driven speech anti-spoofing, as described in our paper [![arXiv](https://img.shields.io/badge/arXiv-2504.05657-b31b1b.svg)](https://arxiv.org/abs/2504.05657)
 
+Accpeted to: **IEEE Transactions on Information Forensics and Security** (T-IFS), IEEE Link: https://ieeexplore.ieee.org/document/11222612
+
 ## 📁 Supported Datasets
 
 This repository supports the following datasets:
