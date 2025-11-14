@@ -239,7 +239,7 @@ Thanks for following open-source projects:
 
 # Cite
 ```  
-@ARTICLE{11222612,
+@ARTICLE{Nes2Net,
   author={Liu, Tianchi and Truong, Duc-Tuan and Kumar Das, Rohan and Aik Lee, Kong and Li, Haizhou},
   journal={IEEE Transactions on Information Forensics and Security}, 
   title={Nes2Net: A Lightweight Nested Architecture for Foundation Model Driven Speech Anti-Spoofing}, 
